@@ -1,0 +1,82 @@
+CREATE DATABASE event_db;
+
+USE event_db;
+
+CREATE TABLE registration(
+
+FirstName varchar(200) ,
+LastName varchar(200) ,
+PhoneNo int(11) ,
+Email varchar(200) ,
+UserName varchar(200) ,
+Password varchar(200),
+DateOfBirth varchar(200) ,
+Address varchar(200),
+primary key(UserName)
+);
+
+CREATE TABLE booking(
+BookingId int  auto_increment,
+UserName varchar(200),
+EventName varchar(50),
+Venue varchar(50),
+NoOfGuest int(20),
+Cake varchar(20),
+primary key(BookingId)
+
+);
+
+ALTER TABLE booking ADD FOREIGN KEY(UserName)
+ REFERENCES registration(UserName);
+
+Create table admin(
+adminId int primary key auto_increment,
+UserNameA varchar(200) not null,
+PasswordA varchar(200) not null
+);
+
+insert into admin(UserNameA,PasswordA)
+Values
+('milon49','milon'),
+('barun34','barun'),
+('faisal36','faisal');
+
+create table payment (
+person int(100),
+cost int(200)
+);
+
+insert into payment (person,cost)
+values 
+(100,175000),
+(200,220000),
+(300,300000),
+(400,370000),
+(500,450000),
+(600,530000),
+(700,600000),
+(800,750000),
+(900,840000),
+(1000,900000); 
+
+
+/*
+CREATE DATABASE arun;
+USE arun;
+CREATE TABLE abc(
+Id int primary key auto_increment,
+name varchar(50),
+person int(100),
+fuck varchar(50)
+);
+
+CREATE TABLE def(
+person int(100),
+cost int(100)
+);
+*/
+
+SELECT cost FROM abc INNER JOIN def ON abc.person=def.person where name='babby' and abc.per
+create table 
+
+
